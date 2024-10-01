@@ -1897,6 +1897,10 @@ video {
      object-fit: scale-down;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2413,6 +2417,97 @@ video {
 
 .forced-color-adjust-none {
   forced-color-adjust: none;
+}
+
+@font-face {
+  font-family: "Ravi300";
+
+  src: url("../_fonts/Ravi-Light.woff") format("woff"),
+      url("../_fonts/Ravi-Light.woff2") format("woff2"),
+      url("../_fonts/Ravi-Light.ttf") format("truetype");
+
+  font-weight: 300;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ravi400";
+
+  src: url("../_fonts/Ravi-Regular.woff") format("woff"),
+      url("../_fonts/Ravi-Regular.woff2") format("woff2"),
+      url("../_fonts/Ravi-Regular.ttf") format("truetype");
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ravi500";
+
+  src: url("../_fonts/Ravi-Medium.woff") format("woff"),
+      url("../_fonts/Ravi-Medium.woff2") format("woff2"),
+      url("../_fonts/Ravi-Medium.ttf") format("truetype");
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ravi700";
+
+  src: url("../_fonts/Ravi-SemiBold.woff") format("woff"),
+      url("../_fonts/Ravi-SemiBold.woff2") format("woff2"),
+      url("../_fonts/Ravi-SemiBold.ttf") format("truetype");
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ravi800";
+
+  src: url("../_fonts/RaviFaNum-Bold.woff") format("woff"),
+      url("../_fonts/RaviFaNum-Bold.woff2") format("woff2"),
+      url("../_fonts/RaviFaNum-Bold.ttf") format("truetype");
+
+  font-weight: 800;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+body {
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul,li,p,h1,h2,h3,h4,h5,h6{
+  padding: 0;
+  margin: 0;
 }
 
 @media (min-width: 480px) {
