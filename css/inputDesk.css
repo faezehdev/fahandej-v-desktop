@@ -47,3 +47,22 @@
     font-style: normal;
     font-display: swap;
   }
+  body {
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+  }
+   
+  * {
+    box-sizing: border-box;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  ul,li,p,h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+  }
