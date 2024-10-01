@@ -368,13 +368,13 @@ a {
     -o-transition: all 1s ease !important;
 }
 .Home .swiper-Container > .swiper-wrapper > .swiper-slide-active{
-    animation:scaleDown;
+    /* animation:scaleDown;
     -webkit-animation:scaleDown;
     animation-timing-function: ease;
     animation-duration: 1s;
-    animation-direction: alternate;
+    animation-direction: alternate; */
 }
-@keyframes scaleDown {
+/* @keyframes scaleDown {
     from {
       transform: translateY(0)
     }
@@ -386,4 +386,18 @@ a {
       -ms-transform: scale(.85) ;
       -o-transform: scale(.85) ;
 }
+  } */
+  .BGSection{
+    background: url('/images/pattern_A_light.png');
+    background-repeat: repeat;
   }
+  header.dark .Icon svg path {
+    stroke: #48494A;
+  }
+  .Projects-Container .Project .OV .Title{
+    background: linear-gradient(360deg, #262627 0%, rgba(38, 38, 39, 0) 100%);
+    backdrop-filter: blur(4px)
+}
+.l{
+color: #26262773;
+}
