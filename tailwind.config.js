@@ -44,11 +44,7 @@ module.exports = {
 
     },
     extend: {
-      spacing: {
-        '1.5': '1.5em',
-        '2.5': '2.5em',
-        
-      },
+      
       content:{
   'content1':' '
       },
@@ -79,6 +75,10 @@ module.exports = {
          '17.05':'17.05px',
        
 
+      },
+
+      width:{
+        '85p':'85%'
       },
       maxWidth: {
         'x100': '100%',
