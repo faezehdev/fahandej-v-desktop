@@ -159,10 +159,13 @@ a {
 }
 
 
-.scrollDown1 .scrl span {
+.scrollDown1 .scrl span ,
+.scrl span 
+    {
   animation: scrollDown1 4s infinite;
   transition: 2s;
   animation-delay: 0.5s;
+  -webkit-animation: scrollDown1 4s infinite;
 }
 
 .darkPagination li{
@@ -227,8 +230,22 @@ a {
     display: flex;
     justify-content: flex-end;
     gap: 1em;
+    margin-left: 5%;
+    margin-bottom: 5%;
   }
-  .Home .Section-1 .swiper-pagination .swiper-pagination-bullet{
+  .Home .swiper-Container > .swiper-pagination{
+    left: 2%;
+    right: unset;
+  }
+  .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet{
+    opacity: 1;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Home .Section-1 .swiper-pagination .swiper-pagination-bullet,
+  .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet .inner{
     width: 8px;
     height: 8px;
     background-color: #D1D3D4;
@@ -249,6 +266,16 @@ a {
     position: relative;
     overflow: hidden;
 }
+.Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+
+}
+.Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet svg{
+    width: 13px;
+    height: 13px;
+
+}
 .Home .Section-1 .swiper-pagination .swiper-pagination-bullet::before{
     content: '';
     position: absolute;
@@ -267,6 +294,10 @@ a {
     -moz-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
     -ms-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
     -o-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
+}
+.Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet-active{
+    background-color: transparent;
+    margin: 0;
 }
 .Home .Section-1 .swiper-pagination .swiper-pagination-bullet-active{
     transition: all .8s ease;
@@ -309,4 +340,50 @@ a {
         height: calc(100% + 100px);
     }
   }
-
+.Home .swiper-banner .swiper-slide-active h1,
+.Home .swiper-banner .swiper-slide-active p{
+    transition: all 2s .8s ease;
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+    -webkit-transition: all 2s .8s ease;
+    -moz-transition: all 2s .8s ease;
+    -ms-transition: all 2s .8s ease;
+    -o-transition: all 2s .8s ease;
+}
+.Home .swiper-Container > .swiper-wrapper > .swiper-slide{
+    transition: all 1s ease !important;
+    -webkit-transition: all 1s ease !important;
+    -moz-transition: all 1s ease !important;
+    -ms-transition: all 1s ease !important;
+    -o-transition: all 1s ease !important;
+}
+.Home .swiper-Container > .swiper-wrapper > .swiper-slide .slide-inner{
+    transition: all 1s ease !important;
+    -webkit-transition: all 1s ease !important;
+    -moz-transition: all 1s ease !important;
+    -ms-transition: all 1s ease !important;
+    -o-transition: all 1s ease !important;
+}
+.Home .swiper-Container > .swiper-wrapper > .swiper-slide-active{
+    animation:scaleDown;
+    -webkit-animation:scaleDown;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+@keyframes scaleDown {
+    from {
+      transform: translateY(0)
+    }
+  
+    to {
+      transform: scale(.85) ;
+      -webkit-transform: scale(.85) ;
+      -moz-transform: scale(.85) ;
+      -ms-transform: scale(.85) ;
+      -o-transform: scale(.85) ;
+}
+  }

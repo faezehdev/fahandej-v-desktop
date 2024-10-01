@@ -10,7 +10,7 @@
 <body>
     <main class="Home" dir="rtl">
         <header class="DesktopHeader z-[99999] w-full fixed left-0 top-0 flex justify-center items-center py-[2em]">
-            <div class="header-inner w-[85%] mx-auto grid grid-cols-[1fr,1fr]">
+            <div class="header-inner w-[90%] mx-auto grid grid-cols-[1fr,1fr]">
                 <div class="Right w-full flex justify-start items-center">
                     <div class="Items w-full flex justify-start items-center gap-[2.8em]">
                         <span class="Item w-auto flex justify-center items-center">
@@ -173,8 +173,9 @@
         </header>
         <div class="swiper-Container w-full flex overflow-hidden h-screen">
             <div class="swiper-wrapper w-full h-full">
-                <div class="swiper-slide h-full Section-1 w-full flex justify-center items-center">
-                    <div class="Sec-1 w-full h-full flex justify-center items-center">
+                <div class="swiper-slide relative h-full overflow-hidden Section-1 w-full flex justify-center items-center">  
+                    <div class="slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
+                    w-full h-full flex justify-center items-center">
                         <div class="Banner-Slider h-full w-full justify-center items-center">
                             <div class="swiper-banner h-full w-full flex overflow-hidden">
                                 <div class="swiper-wrapper w-full h-full">
@@ -184,13 +185,15 @@
                                         </div>
                                         <div class="OV absolute flex-col gap-5
                                          left-0 top-0 z-2 w-full h-full flex justify-center items-center">
-                                            <div class="Title w-full flex justify-start items-start">
-                                                <h1 class="mr-[5%] font-Ravi500 font-medium text-[28px] leading-43.4 text-white">
+                                            <div class="Title w-full flex justify-start items-start overflow-hidden">
+                                                <h1 class="mr-[5%] font-Ravi500 translate-y-100 duration-200
+                                                 font-medium text-[28px] leading-43.4 text-white">
                                                     پروژه‌ی آوان
                                                 </h1>
                                             </div>
-                                            <div class="Text w-full flex justify-start items-start flex-col">
-                                                <p class="mr-[5%] font-Ravi500 font-medium text-xl leading-31 text-white">
+                                            <div class="Text w-full flex justify-start items-start flex-col overflow-hidden">
+                                                <p class="mr-[5%] font-Ravi500 translate-y-100 duration-200
+                                                 font-medium text-xl leading-31 text-white">
                                                     طبیعتی سبز برای زندگی، آرامش، شادمانی و مهمانی
                                                 </p>
                                             </div>
@@ -217,41 +220,56 @@
                                             <img src="images/tohid.png" alt="" class="w-full h-full object-cover">
                                         </div>
                                         <div class="OV absolute flex-col gap-5
-                                         left-0 top-0 z-2 w-full h-full flex justify-center items-center">
-                                            <div class="Title w-full flex justify-start items-start">
-                                                <h1 class="mr-[5%] font-Ravi500 font-medium text-[28px] leading-43.4 text-white">
-                                                    پروژه‌ی آوان
-                                                </h1>
-                                            </div>
-                                            <div class="Text w-full flex justify-start items-start flex-col">
-                                                <p class="mr-[5%] font-Ravi500 font-medium text-xl leading-31 text-white">
-                                                    طبیعتی سبز برای زندگی، آرامش، شادمانی و مهمانی
-                                                </p>
-                                            </div>
-                                            <div class="Btn w-auto flex justify-start items-start ml-auto mr-[5%]  mt-[1.5em]">
-                                                <a href="" class="ShowBTN w-max px-[.8em] group/btn rounded-[5px]
-                                                 hover:bg-dark duration-[.5s]
-                                                 py-[.4em] bg-main flex justify-center items-center gap-2">
-                                                 
-                                                    <span class="Icon w-auto flex justify-center items-center">
-                                                        <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M1 4.5H9M5 0.5V8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                                                            </svg>
-                                                            
-                                                    </span>
-                                                    <span class="Text font-Ravi400 font-normal text-[11px] text-white leading-17.05">
-                                                        اطلاعات بیشتر
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </div>
+                                        left-0 top-0 z-2 w-full h-full flex justify-center items-center">
+                                           <div class="Title w-full flex justify-start items-start overflow-hidden">
+                                               <h1 class="mr-[5%] font-Ravi500 translate-y-100 duration-200
+                                                font-medium text-[28px] leading-43.4 text-white">
+                                                   پروژه‌ی آوان
+                                               </h1>
+                                           </div>
+                                           <div class="Text w-full flex justify-start items-start flex-col overflow-hidden">
+                                               <p class="mr-[5%] font-Ravi500 translate-y-100 duration-200
+                                                font-medium text-xl leading-31 text-white">
+                                                   طبیعتی سبز برای زندگی، آرامش، شادمانی و مهمانی
+                                               </p>
+                                           </div>
+                                           <div class="Btn w-auto flex justify-start items-start ml-auto mr-[5%]  mt-[1.5em]">
+                                               <a href="" class="ShowBTN w-max px-[.8em] group/btn rounded-[5px]
+                                                hover:bg-dark duration-[.5s]
+                                                py-[.4em] bg-main flex justify-center items-center gap-2">
+                                                
+                                                   <span class="Icon w-auto flex justify-center items-center">
+                                                       <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                           <path d="M1 4.5H9M5 0.5V8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                           </svg>
+                                                           
+                                                   </span>
+                                                   <span class="Text font-Ravi400 font-normal text-[11px] text-white leading-17.05">
+                                                       اطلاعات بیشتر
+                                                   </span>
+                                               </a>
+                                           </div>
+                                       </div>
                                     </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
+                                <div class="scrl absolute right-[5%] bottom-[2em] z-2 flex justify-center w-[13.42px] h-8 bg-dark3">
+                                    <span class="absolute bottom-0 w-[4.76px] h-[4.76px] bg-white rounded-[1px] rotate-45"></span>
+                                </div>
                             </div>
                         </div>
+                    </div>    
+                    
+                    </div>
+                    <div class="swiper-slide relative overflow-hidden h-full Section-2 w-full flex justify-center items-center">
+                        <div class="Sec-2 slide-inner absolute left-0 top-0 bottom-0 overflow-hidden
+                         w-full h-full flex justify-center items-center">
+                         <img src="images/tohid.png" alt="">
+                        </div>
+                      
                     </div>
                 </div>
+              <div class="swiper-pagination"></div>
             </div>
         </div>
     </main>

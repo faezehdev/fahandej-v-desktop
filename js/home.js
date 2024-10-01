@@ -1,5 +1,6 @@
 const interleaveOffset = 0.5;
 // main slider
+
 let swiperMin = new Swiper('.swiper-Container', {
     loop: false,
     direction: "vertical",
@@ -10,11 +11,12 @@ let swiperMin = new Swiper('.swiper-Container', {
     mousewheelControl: true,
     mousewheel: true,
       pagination: {
-        el: '.Home .swiper-pagination',
+        el: '.swiper-Container > .swiper-pagination',
         clickable: true,
         type: 'bullets',
         renderBullet: function (index, className) {
-        return '<span class="' + className + '">'  + '</span>';
+            console.log(className);
+        return '<span class="' + className + '">'  +'<span class="inner"></span>'+ '</span>';
     
         }
       },
@@ -38,7 +40,12 @@ let swiperMin = new Swiper('.swiper-Container', {
             swiper.slides[i].style.transition = speed + "ms";
             swiper.slides[i].querySelector(".slide-inner").style.transition =
               speed + "ms";
+              swiper.slides[i].style.transform='scale(.85)'
+              if(swiper.slides[i].classList.contains('swiper-slide-active')){
+                swiper.slides[i].style.transform='scale(1)'
+              }
           }
+
         },
         slideChange: function () {
             let swiper = this;
@@ -46,34 +53,21 @@ let swiperMin = new Swiper('.swiper-Container', {
                 swiper.params.touchReleaseOnEdges = false;
                 swiper.params.mousewheel.releaseOnEdges = false;
             });
+            for(let r= 0 ; r< swiper.slides.length ; r++){
+                let bullet = document.querySelectorAll(' .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet')
+                bullet[r].innerHTML = `<span class="inner"></span>`
+            }
+            document.querySelector(' .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet-active').innerHTML =`<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.322887 4.22048C-0.107629 4.651 -0.107629 5.349 0.322887 5.77952L4.22048 9.67711C4.651 10.1076 5.349 10.1076 5.77952 9.67711L9.67711 5.77952C10.1076 5.349 10.1076 4.651 9.67711 4.22048L5.77952 0.322887C5.349 -0.107629 4.651 -0.107629 4.22048 0.322887L0.322887 4.22048ZM3.12915 4.68819C2.95695 4.8604 2.95695 5.1396 3.12915 5.31181L4.68819 6.87084C4.8604 7.04305 5.1396 7.04305 5.31181 6.87084L6.87085 5.31181C7.04305 5.1396 7.04305 4.8604 6.87084 4.68819L5.31181 3.12915C5.1396 2.95695 4.8604 2.95695 4.68819 3.12915L3.12915 4.68819Z" fill="#8F993C"/>
+    </svg>
+    `
           },
-        //   reachEnd: function () {
-        //     let swiper = this;
-        //     setTimeout(function () {
-        //         swiper.params.touchReleaseOnEdges = true;
-        //         swiper.params.mousewheel.releaseOnEdges = true;
-        //         lenis.start();
-        //       console.log("end"); 
-        //     //   window.scrollTo(0,0)
-        //          body.style.position="relative"
-        //     }, 500);
-        //   },
-        //   reachBeginning: function () {
-        //     let swiper = this;
-        //     console.log("begin");
-        //     // body.style.position="fixed"
-           
-        //     lenis.scrollTo('.sec-1');
-    
-        //     setTimeout(function () {
-        //         swiper.params.touchReleaseOnEdges = true;
-        //         swiper.params.mousewheel.releaseOnEdges = true;
-        //          lenis.stop();
-        //     }, 500);
-        //   },
       }
     });
-
+    document.querySelector(' .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet-active').innerHTML =`<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.322887 4.22048C-0.107629 4.651 -0.107629 5.349 0.322887 5.77952L4.22048 9.67711C4.651 10.1076 5.349 10.1076 5.77952 9.67711L9.67711 5.77952C10.1076 5.349 10.1076 4.651 9.67711 4.22048L5.77952 0.322887C5.349 -0.107629 4.651 -0.107629 4.22048 0.322887L0.322887 4.22048ZM3.12915 4.68819C2.95695 4.8604 2.95695 5.1396 3.12915 5.31181L4.68819 6.87084C4.8604 7.04305 5.1396 7.04305 5.31181 6.87084L6.87085 5.31181C7.04305 5.1396 7.04305 4.8604 6.87084 4.68819L5.31181 3.12915C5.1396 2.95695 4.8604 2.95695 4.68819 3.12915L3.12915 4.68819Z" fill="#8F993C"/>
+    </svg>
+    `
     // banner slider
     let SwiperBanner= new Swiper ('.swiper-banner', {
         slidesPerView: 1,
