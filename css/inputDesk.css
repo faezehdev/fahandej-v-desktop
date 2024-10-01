@@ -47,6 +47,13 @@
     font-style: normal;
     font-display: swap;
   }
+  @font-face {
+    font-family: "EncodeSans500";
+    src: url("../fonts/EncodeSansCondensed-Medium.ttf") format("ttf");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
   body {
     transition: 0.3s ease-out;
     overflow-x: hidden;
@@ -65,4 +72,95 @@
   ul,li,p,h1,h2,h3,h4,h5,h6{
     padding: 0;
     margin: 0;
+  }
+
+  .Home .Section-1 .swiper-pagination{
+    left: 0;
+    right: unset;
+    top: unset;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+  }
+  .Home .Section-1 .swiper-pagination .swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    background-color: #D1D3D4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    position: relative;
+    overflow: hidden;
+}
+.Home .Section-1 .swiper-pagination .swiper-pagination-bullet::before{
+    content: '';
+    position: absolute;
+    left: 55%;
+    bottom:-70%;
+    width: calc(100% + 100px);
+    height: 100%;
+    z-index: 2;
+    transition: all 10s ease;
+    -webkit-transition: all 10s ease;
+    -moz-transition: all 10s ease;
+    -ms-transition: all 10s ease;
+    -o-transition: all 10s ease;
+    transform:rotate(-50deg) translateX(-50%) translateY(-30%);
+    -webkit-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
+    -moz-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
+    -ms-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
+    -o-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
+}
+.Home .Section-1 .swiper-pagination .swiper-pagination-bullet-active{
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+}
+.Home .Section-1 .swiper-pagination .swiper-pagination-bullet-active::before{
+    content: '';
+    position: absolute;
+    left: 55%;
+    bottom:-70%;
+    width: calc(100% + 100px);
+    background-color: #8F993C;
+    height: calc(100% + 100px);
+    z-index: 2;
+    animation: change-height;
+    -webkit-animation: change-height;
+    animation-duration: 10s !important;
+    transform-origin: center;
+    transition: all 10s ease;
+    -webkit-transition: all 10s ease;
+    -moz-transition: all 10s ease;
+    -ms-transition: all 10s ease;
+    -o-transition: all 10s ease;
+}
+.Home .Section-1 .swiper-pagination .swiper-pagination-bullet-active{
+    transform:rotate(45deg) scale(1.2);
+    -webkit-transform:rotate(45deg) scale(1.2);
+    -moz-transform:rotate(45deg) scale(1.2);
+    -ms-transform:rotate(45deg) scale(1.2);
+    -o-transform:rotate(45deg) scale(1.2);
+}
+@keyframes change-height {
+    0% {
+      height: 0;
+    }
+    100% {
+        height: calc(100% + 100px);
+    }
   }

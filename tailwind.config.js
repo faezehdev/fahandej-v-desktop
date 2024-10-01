@@ -40,6 +40,8 @@ module.exports = {
       'Ravi500': ['Ravi500', 'Ravi500'],
       'Ravi700': ['Ravi700', 'Ravi700'],
       'Ravi800': ['Ravi800', 'Ravi800'],
+      'EncodeSans500': ['EncodeSans500', 'EncodeSans500'],
+
     },
     extend: {
       spacing: {
@@ -71,12 +73,12 @@ module.exports = {
          '46.96':'46.96px',
          '16.41':'16.41px',
          '14.06':'14.06px',
+         '18.75':'18.75px',
+         '31':'31px',
+         '43.4':'43.4px',
+         '17.05':'17.05px',
        
 
-      },
-
-      width:{
-        '85':'85%'
       },
       maxWidth: {
         'x100': '100%',
