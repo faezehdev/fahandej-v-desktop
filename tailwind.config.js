@@ -42,11 +42,7 @@ module.exports = {
       'Ravi800': ['Ravi800', 'Ravi800'],
     },
     extend: {
-      spacing: {
-        '1.5': '1.5em',
-        '2.5': '2.5em',
-        
-      },
+      
       content:{
   'content1':' '
       },
@@ -76,7 +72,7 @@ module.exports = {
       },
 
       width:{
-        '85':'85%'
+        '85p':'85%'
       },
       maxWidth: {
         'x100': '100%',
