@@ -391,6 +391,21 @@ a {
     background: url('/images/pattern_A_light.png');
     background-repeat: repeat;
   }
+  .bgContact{
+    background: url('/images/bgContact.png');
+    background-repeat: repeat;
+  }
+  footer .Map-Container::before{
+    content: '';
+    position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+z-index: 0;
+    background: #000000eb;
+
+  }
   header.dark .Icon svg path {
     stroke: #48494A;
   }
