@@ -367,26 +367,7 @@ a {
     -ms-transition: all 1s ease !important;
     -o-transition: all 1s ease !important;
 }
-.Home .swiper-Container > .swiper-wrapper > .swiper-slide-active{
-    /* animation:scaleDown;
-    -webkit-animation:scaleDown;
-    animation-timing-function: ease;
-    animation-duration: 1s;
-    animation-direction: alternate; */
-}
-/* @keyframes scaleDown {
-    from {
-      transform: translateY(0)
-    }
-  
-    to {
-      transform: scale(.85) ;
-      -webkit-transform: scale(.85) ;
-      -moz-transform: scale(.85) ;
-      -ms-transform: scale(.85) ;
-      -o-transform: scale(.85) ;
-}
-  } */
+
   .BGSection{
     background: url('/images/pattern_A_light.png');
     background-repeat: repeat;
