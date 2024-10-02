@@ -28,6 +28,7 @@ module.exports = {
     colors: {
       'main':'#8F993C',
       'white':'#FFFFFF',
+      'black':'#000000',
       'lightGray':'#D1D3D4',
       'dark':'#262627',
       'dark2':'#48494A',
@@ -72,7 +73,8 @@ module.exports = {
       },
 
       width:{
-        '85p':'85%'
+        '85p':'85%',
+        '90p':'90%',
       },
       maxWidth: {
         'x100': '100%',

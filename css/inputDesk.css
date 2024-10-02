@@ -90,7 +90,6 @@ h6 {
   font-size: 16px;
   line-height: 25.04px;
   text-align: right;
-  margin-bottom: 20px;
 }
 
 a {
@@ -187,4 +186,70 @@ a {
   100% {
     transform: translateY(-2px) rotate(45deg);
   }
+}
+
+.missionSlider .swiper-slide-active .para{
+height: fit-content!important;
+opacity: 1!important;
+transform: scale(1)!important;
+}
+
+.missionpagination .swiper-pagination-bullet{
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background-color: #48494A;
+  border: 3px solid #48494A;
+  transition: 0.5s ease;
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.missionpagination .swiper-pagination-bullet-active{
+  background-color: transparent;
+  border: 3px solid #8F993C;
+  width: 10px;
+  height: 10px;
+}
+.paraSliderpagination .swiper-pagination-bullet , .pagination6 .swiper-pagination-bullet{
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background-color: white;
+  border: 3px solid white;
+  transition: 0.5s ease;
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.paraSliderpagination .swiper-pagination-bullet-active , .pagination6 .swiper-pagination-bullet-active{
+  background-color: transparent;
+  border: 3px solid #8F993C;
+  width: 10px;
+  height: 10px;
+}
+
+
+.activenavBarSlider span{
+  color: white;
+}
+.activenavBarSlider{
+  border-bottom: 1.5px solid white;
+}
+
+
+.aboutpopUp{
+  transform: translateY(-100%);
+}
+
+.activePop{
+  transform: translateY(0);
+
+}
+
+
+.managerPagination , .bookPagination  , .popUpPagination{
+  font-family: "Ravi500";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 31px;
+  color: #636466;
 }
