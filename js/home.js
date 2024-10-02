@@ -2,6 +2,18 @@ $('.Home').imagesLoaded( {
 
 },  function() {
     $(document).ready(function() {
+      
+gsap.to(".Loading-Container svg", {
+  opacity: 0,
+  delay: 3,
+  ease: "expo.in",
+});
+gsap.to(".Loading-Container", {
+  scale: 0,
+  delay: 4,
+  ease: "expo.in",
+});
+      setTimeout(() => {
         const interleaveOffset = 0.5;
         // main slider
         
@@ -136,11 +148,8 @@ $('.Home').imagesLoaded( {
                 
                     }
                   },
-                })
-    })
-
-})
-
+                }) 
+                
 // projects hover
 let projects = document.querySelectorAll('.Project')
 projects.forEach(p=>{
@@ -159,19 +168,8 @@ projects.forEach(p=>{
 
     })
 })
+      }, 4000);
+ 
+    })
 
-console.clear();
-gsap.registerPlugin(DrawSVGPlugin);
-gsap.set(".path", { drawSVG: false });
-gsap.set(".Loading-Container svg", { opacity: 1 });
-
-gsap
-  .timeline({ delay: 0.75 })
-  .to("#track", { duration: 0.85, drawSVG: true, ease: "power2.inOut" })
-  .to("#target", { drawSVG: "0% 15%", ease: "power2.in" })
-  .to("#target", {
-    duration: 1.25,
-    drawSVG: "100% 115%",
-    ease: "none",
-    repeat: -1
-  });
+})
