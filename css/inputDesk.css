@@ -376,7 +376,8 @@ a {
     background: url('/images/bgContact.png');
     background-repeat: repeat;
   }
-  footer .Map-Container::before{
+  footer .Map-Container::before
+ {
     content: '';
     position: absolute;
 left: 0;
@@ -387,6 +388,19 @@ z-index: 0;
     background: #000000eb;
 
   }
+
+  .Error-C .bgContact::before{
+    content: '';
+    position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+z-index: 0;
+background: #000000c9;
+
+  }
+
   header.dark .Icon svg path {
     stroke: #48494A;
   }
@@ -426,14 +440,7 @@ order: 2;
   background-image: url('/images/pattern_A_light.png');
   background-repeat: repeat;
 }
-/* 
-.Loading-Container svg {
-  stroke-width: 1;
-  fill-opacity: 0;
-  stroke-dasharray: 350;
-  stroke-dashoffset: 440;
 
-} */
 .searchs{
   padding:1em .2em;
 }
