@@ -413,6 +413,31 @@ z-index: 0;
     background: linear-gradient(360deg, #262627 0%, rgba(38, 38, 39, 0) 100%);
     backdrop-filter: blur(4px)
 }
-.l{
-color: #26262773;
+.Articles .Row{
+  display: grid;
+  gap: 1.5em;
+  grid-template-rows: 510px;
+  grid-template-columns: 1fr .8fr .8fr 1fr;
+}
+.Articles .Row .innerRow{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  height: 510px;
+  grid-template-rows: repeat(2,48.5%);
+}
+.Articles .Row:nth-child(even) {
+  grid-template-columns: 1fr 1fr .8fr .8fr ;
+}
+.Articles .Row:nth-child(even) .innerRow{
+order: 2;
+}
+.Articles .Row:nth-child(even) .Blog:nth-child(1){
+  order: 1;
+}
+.Articles .Row:nth-child(even) .Blog:nth-child(2){
+  order: 3;
+}
+.Articles .Row:nth-child(even) .Blog:nth-child(3){
+  order: 4;
 }
