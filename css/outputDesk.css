@@ -717,6 +717,10 @@ video {
   z-index: 3;
 }
 
+.z-\[999999\] {
+  z-index: 999999;
+}
+
 .z-\[99999\] {
   z-index: 99999;
 }
@@ -3507,6 +3511,20 @@ header.dark .Icon svg path {
 .Articles .Row:nth-child(even) .Blog:nth-child(3){
   order: 4;
 }
+
+.Loading-Container{
+  background-image: url('/images/pattern_A_light.png');
+  background-repeat: repeat;
+}
+
+/* 
+.Loading-Container svg {
+  stroke-width: 1;
+  fill-opacity: 0;
+  stroke-dasharray: 350;
+  stroke-dashoffset: 440;
+
+} */
 
 @media (min-width: 480px) {
   .sm\:container {

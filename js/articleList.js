@@ -1,7 +1,18 @@
 let header = document.querySelector('header')
 header.classList.add('dark')
 header.classList.add('darkLogo')
+  // Enable Scroll
 
+  const lenis = new Lenis()
+
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+  
+  requestAnimationFrame(raf)
+  
 let btns = document.querySelectorAll('.Filters .ShowBTN')
 btns.forEach(btn=>{
     btn.addEventListener('click',(e)=>{

@@ -422,3 +422,15 @@ order: 2;
 .Articles .Row:nth-child(even) .Blog:nth-child(3){
   order: 4;
 }
+.Loading-Container{
+  background-image: url('/images/pattern_A_light.png');
+  background-repeat: repeat;
+}
+/* 
+.Loading-Container svg {
+  stroke-width: 1;
+  fill-opacity: 0;
+  stroke-dasharray: 350;
+  stroke-dashoffset: 440;
+
+} */

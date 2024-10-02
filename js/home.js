@@ -159,3 +159,19 @@ projects.forEach(p=>{
 
     })
 })
+
+console.clear();
+gsap.registerPlugin(DrawSVGPlugin);
+gsap.set(".path", { drawSVG: false });
+gsap.set(".Loading-Container svg", { opacity: 1 });
+
+gsap
+  .timeline({ delay: 0.75 })
+  .to("#track", { duration: 0.85, drawSVG: true, ease: "power2.inOut" })
+  .to("#target", { drawSVG: "0% 15%", ease: "power2.in" })
+  .to("#target", {
+    duration: 1.25,
+    drawSVG: "100% 115%",
+    ease: "none",
+    repeat: -1
+  });
