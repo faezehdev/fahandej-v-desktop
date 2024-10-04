@@ -47,6 +47,31 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "EncodeSans600";
+  src: url("../_fonts/EncodeSans-SemiBold.eot");
+  src: url("../_fonts/EncodeSans-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/EncodeSans-SemiBold.woff") format("woff"),
+    url("../_fonts/EncodeSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANSansWeb700";
+  font-family: "IRANSansWeb(FaNum)700";
+  src: url("../../_fonts/IRANSansWeb(FaNum)_Bold.eot");
+  src: url("../../_fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../_fonts/IRANSansWeb(FaNum)_Bold.woff") format("woff"),
+    url("../../_fonts/IRANSansWeb(FaNum)_Bold.woff2") format("woff2"),
+    url("../../_fonts/IRANSansWeb(FaNum)_Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   transition: 0.3s ease-out;
   overflow-x: hidden;
@@ -256,4 +281,31 @@ transform: scale(1)!important;
   font-weight: 500;
   line-height: 31px;
   color: #636466;
+}
+
+.projectList .outer{
+top: unset!important;
+}
+
+.projectList .activeList h2 {
+
+  font-family: "IRANSansWeb700";
+  color: #8F993C;
+}
+
+.projectList h2 ,.projectList h3 {
+  transition: 0.5s;
+}
+.projectList .activeList h3{
+color: #8F993C;
+font-family: "EncodeSans600";
+}
+
+.activeFilterList{
+  background-color: #8F993C;
+  border: 1px solid #8F993C;
+}
+.activeFilterList a{
+  color: white;
+
 }

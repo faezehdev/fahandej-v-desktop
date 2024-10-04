@@ -41,6 +41,8 @@ module.exports = {
       'Ravi500': ['Ravi500', 'Ravi500'],
       'Ravi700': ['Ravi700', 'Ravi700'],
       'Ravi800': ['Ravi800', 'Ravi800'],
+      'EncodeSans600': ['EncodeSans600', 'EncodeSans600'],
+      'IRANSansWeb700': ['IRANSansWeb700', 'IRANSansWeb700'],
     },
     extend: {
       
