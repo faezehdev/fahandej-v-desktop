@@ -47,6 +47,31 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "EncodeSans600";
+  src: url("../_fonts/EncodeSans-SemiBold.eot");
+  src: url("../_fonts/EncodeSans-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/EncodeSans-SemiBold.woff") format("woff"),
+    url("../_fonts/EncodeSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANSansWeb700";
+  font-family: "IRANSansWeb(FaNum)700";
+  src: url("../../_fonts/IRANSansWeb(FaNum)_Bold.eot");
+  src: url("../../_fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../_fonts/IRANSansWeb(FaNum)_Bold.woff") format("woff"),
+    url("../../_fonts/IRANSansWeb(FaNum)_Bold.woff2") format("woff2"),
+    url("../../_fonts/IRANSansWeb(FaNum)_Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   transition: 0.3s ease-out;
   overflow-x: hidden;
@@ -90,7 +115,6 @@ h6 {
   font-size: 16px;
   line-height: 25.04px;
   text-align: right;
-  margin-bottom: 20px;
 }
 
 a {
@@ -147,7 +171,7 @@ a {
     linear-gradient(90deg, rgba(72, 73, 74, 0) 0%, rgba(38, 38, 39, 0.85) 100%);
 }
 
-.aboutUs .pagination li {
+.aboutUs .pagination li ,.contactUs .pagination li{
   width: 10px;
   height: 10px;
   border: 4px solid #48494A;
@@ -158,6 +182,11 @@ a {
   border-radius: 2px;
 }
 
+.aboutUs .pagination li.activePaging ,.contactUs .pagination li.activePaging {
+  border: 3px solid #8f993c!important;
+  background-color: transparent!important;
+}
+.scrollDown1 .scrl span {
 
 .scrollDown1 .scrl span ,
 .scrl span 
@@ -174,10 +203,7 @@ a {
 }
 
 
-.aboutUs .pagination li.activePaging {
-  border: 3px solid #8f993c!important;
-  background-color: transparent!important;
-}
+
 @keyframes scrollDown1 {
   0% {
     transform: translateY(-2px) rotate(45deg);
@@ -519,4 +545,101 @@ outline: none;
 
   background-color: #8F993C;
   top: 100% !important;
+}
+
+.missionSlider .swiper-slide-active .para{
+height: fit-content!important;
+opacity: 1!important;
+transform: scale(1)!important;
+}
+
+.missionpagination .swiper-pagination-bullet{
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background-color: #48494A;
+  border: 3px solid #48494A;
+  transition: 0.5s ease;
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.missionpagination .swiper-pagination-bullet-active{
+  background-color: transparent;
+  border: 3px solid #8F993C;
+  width: 10px;
+  height: 10px;
+}
+.paraSliderpagination .swiper-pagination-bullet , .pagination6 .swiper-pagination-bullet{
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background-color: white;
+  border: 3px solid white;
+  transition: 0.5s ease;
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.paraSliderpagination .swiper-pagination-bullet-active , .pagination6 .swiper-pagination-bullet-active{
+  background-color: transparent;
+  border: 3px solid #8F993C;
+  width: 10px;
+  height: 10px;
+}
+
+
+.activenavBarSlider span{
+  color: white;
+}
+.activenavBarSlider{
+  border-bottom: 1.5px solid white;
+}
+
+
+.aboutpopUp{
+  transform: translateY(-100%);
+}
+
+.activePop{
+  transform: translateY(0)!important;
+
+}
+.formPopUp{
+  transform: translateY(-100%);
+}
+
+
+
+.managerPagination , .bookPagination  , .popUpPagination{
+  font-family: "Ravi500";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 31px;
+  color: #636466;
+}
+
+.projectList .outer{
+top: unset!important;
+}
+
+.projectList .activeList h2 {
+
+  font-family: "IRANSansWeb700";
+  color: #8F993C;
+}
+
+.projectList h2 ,.projectList h3 {
+  transition: 0.5s;
+}
+.projectList .activeList h3{
+color: #8F993C;
+font-family: "EncodeSans600";
+}
+
+.activeFilterList{
+  background-color: #8F993C;
+  border: 1px solid #8F993C;
+}
+.activeFilterList a{
+  color: white;
+
 }

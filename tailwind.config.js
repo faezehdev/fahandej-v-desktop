@@ -28,6 +28,7 @@ module.exports = {
     colors: {
       'main':'#8F993C',
       'white':'#FFFFFF',
+      'black':'#000000',
       'lightGray':'#D1D3D4',
       'dark':'#262627',
       'dark2':'#48494A',
@@ -40,6 +41,8 @@ module.exports = {
       'Ravi500': ['Ravi500', 'Ravi500'],
       'Ravi700': ['Ravi700', 'Ravi700'],
       'Ravi800': ['Ravi800', 'Ravi800'],
+      'EncodeSans600': ['EncodeSans600', 'EncodeSans600'],
+      'IRANSansWeb700': ['IRANSansWeb700', 'IRANSansWeb700'],
       'EncodeSans500': ['EncodeSans500', 'EncodeSans500'],
 
     },
@@ -82,7 +85,8 @@ module.exports = {
       },
 
       width:{
-        '85p':'85%'
+        '85p':'85%',
+        '90p':'90%',
       },
       maxWidth: {
         'x100': '100%',
