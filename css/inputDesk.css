@@ -491,15 +491,14 @@ border-bottom:  1px solid #262627;
 outline: none;
 }
 .searchs input::-moz-placeholder,
-.searchs input::placeholder,
-.searchs input:placeholder-shown{
+.searchs input::placeholder{
 
-  color: #262627
-  ;
+  color: #262627 !important;
   font-size: 13px;
   font-weight: 400;
   line-height: 21px;
   font-family:'Ravi400';
+  opacity:  1 !important;
   }
 
   header.dark .searchIconHeader svg path{
