@@ -642,3 +642,142 @@ font-family: "EncodeSans600";
   color: white;
 
 }
+
+
+
+/* SHARE */
+.share__wrapper,
+.social-link {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.share__wrapper {
+  left: 0;
+  /* transform: translate(-50%, -50%); */
+}
+
+
+
+.toggle-button {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+ 
+}
+.toggle-button:focus {
+  outline: 0;
+}
+.toggle-button:before, .toggle-button:after {
+  content: "";
+  position: absolute;
+}
+.toggle-button:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+
+
+.social-link {
+  visibility: hidden;
+  border-radius: 50%;
+  transition: all 0.1s ease;
+}
+.social-link:nth-child(1) {
+  left: -132px;
+}
+.social-link:nth-child(2) {
+  left: -66px;
+}
+.social-link:nth-child(3) {
+}
+
+.share__wrapper--open-left .social-link {
+  animation: 0.1s right forwards;
+  opacity: 0;
+  will-change: animation;
+}
+.share__wrapper--open-left .social-link:nth-child(1) {
+  left: 131px;
+}
+.share__wrapper--open-left .social-link:nth-child(2) {
+  left: 100px;
+}
+.share__wrapper--open-left .social-link:nth-child(3) {
+  left: 65px;
+}
+
+.share__wrapper--active .social-link {
+  visibility: visible;
+  animation: 0.1s left forwards;
+}
+.share__wrapper--active .social-link:nth-child(1) {
+  animation-delay: 0.075s;
+}
+.share__wrapper--active .social-link:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+@keyframes shareClose {
+  0% {
+    opacity: 0;
+    transform: rotateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+@keyframes left {
+  50% {
+    transform: translateX(-170%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-130%);
+  }
+}
+@keyframes right {
+  0% {
+    transform: translateX(-130%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+    left: 0;
+  }
+}
+
+.share button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
