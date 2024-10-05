@@ -3523,12 +3523,12 @@ ul,li,p,h1,h2,h3,h4,h5,h6{
 }
 
 .BGSection{
-  background: url('/images/pattern_A_light.png');
+  background: url('../images/pattern_A_light.png');
   background-repeat: repeat;
 }
 
 .bgContact{
-  background: url('/images/bgContact.png');
+  background: url('../images/bgContact.png');
   background-repeat: repeat;
 }
 
@@ -3601,7 +3601,7 @@ header.dark .Icon svg path {
 }
 
 .Loading-Container{
-  background-image: url('/images/pattern_A_light.png');
+  background-image: url('../images/pattern_A_light.png');
   background-repeat: repeat;
 }
 
