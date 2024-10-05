@@ -23,33 +23,61 @@ btns.forEach(btn=>{
 
     })
 })
-
-var elements = document.querySelectorAll('.Blog');
-var gallery = document.querySelector('.Articles')
-
-var groupSize = 5;
-var groupCount = Math.ceil(elements.length / groupSize);
-
-for (var i = 0; i < groupCount; i++) {
-var startIndex = i * groupSize;
-var endIndex = startIndex + groupSize;
-
-var groupElements = Array.from(elements).slice(startIndex, endIndex);
-
-var groupDiv = document.createElement('div');
-groupDiv.className = 'Row';
-console.log(groupElements);
-let groupInnerDiv = document.createElement('div')
-groupInnerDiv.className = 'innerRow'
-groupElements.forEach(function (element,index) {
-groupDiv.appendChild(element);
-console.log(index);
-if(index > 2){
-    groupDiv.appendChild(groupInnerDiv)
-    groupInnerDiv.appendChild(element)
+function showBlog(){
+  var elements = document.querySelectorAll('.Blog');
+  var gallery = document.querySelector('.Articles')
+  
+  var groupSize = 5;
+  var groupCount = Math.ceil(elements.length / groupSize);
+  
+  for (var i = 0; i < groupCount; i++) {
+  var startIndex = i * groupSize;
+  var endIndex = startIndex + groupSize;
+  
+  var groupElements = Array.from(elements).slice(startIndex, endIndex);
+  
+  var groupDiv = document.createElement('div');
+  groupDiv.className = 'Row';
+  console.log(groupElements);
+  let groupInnerDiv = document.createElement('div')
+  groupInnerDiv.className = 'innerRow'
+  groupElements.forEach(function (element,index) {
+  groupDiv.appendChild(element);
+  console.log(index);
+  if(index > 2){
+      groupDiv.appendChild(groupInnerDiv)
+      groupInnerDiv.appendChild(element)
+  }
+  
+  });
+  
+  gallery.appendChild(groupDiv);
+  }
+  
+  
 }
+showBlog()
+let btnF = document.querySelectorAll('.Filteritem')
+let catid
+btnF[0].querySelector('.ShowBTN').classList.add('active')
+btnF.forEach(b=>{
+  b.addEventListener('click',(e)=>{
+  catid = e.currentTarget.getAttribute('data-catid')
+  btnF.forEach(b=>{
+    b.classList.remove('active')
+    b.querySelector('.ShowBTN').classList.remove('active')
+  })
+  e.currentTarget.classList.add('active')
+  e.currentTarget.querySelector('.ShowBTN').classList.remove('active')
+  var url = `/load-blog.inc?catid=${catid}`;
+  $(".Articles").load(url);
+  setTimeout(() => {
+    showBlog()
+      gsap.to('.Blog',{
+        opacity:1,
+        stagger:.2
+      })
 
-});
-
-gallery.appendChild(groupDiv);
-}
+  }, 1000);
+  })
+})

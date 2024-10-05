@@ -4,16 +4,17 @@
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9639">
    <member name="social" type="view" postsql="select * from [db.social] where TypeID=245"/> 
 </basis>
-<footer class="DesktopFooter h-full w-full flex justify-center items-center">
+<footer class="DesktopFooter h-full w-full darkSection flex justify-center items-center">
     <div class="footer w-full h-full flex flex-col justify-center items-center">
         <div class="Top w-full h-full flex justify-start items-start">
-            <div class="Map-Container h-full relative bgContact w-full flex justify-center items-center">
-                <div class="Map w-full h-full mx-auto relative z-2">
+            <div class="Map-Container h-full relative w-full flex justify-center items-center" >
                     <img src="[##cms.cms.cdn##]/images/footer-back.jpg" alt="Fahandej" title="Fahandej"
-                     class="w-full h-full object-cover">
+                     class="w-full h-full object-cover absolute z-[3]">
+                <div class="Map w-full h-full mx-auto bgContact absolute z-[4] opacity-[.1] " >
+                
                 </div>
-                <div class="OverBox absolute grid grid-cols-[1fr,1fr,1fr]
-                left-0 top-0 w-[90%] h-full right-0 mx-auto z-3">
+                <div class="OverBox absolute grid grid-cols-[30%,40%,30%]
+                left-0 w-[90%] right-0 h-[85%] mt-auto bottom-0 mx-auto z-[6]">
                  <div class="Right w-full flex justify-center items-start flex-col gap-2">
                     <div class="Title w-full flex justify-start items-start">
                         <p class="font-Ravi500 font-medium text-base leading-24.18 text-white">
@@ -234,26 +235,36 @@
                                            <div class="captchaBox">
                                                <input type="hidden" name="captchaid" value="@captcha@" />
                                                  <!-- <input type="hidden" name="captcha" value="@captcha@" /> -->
-                                              <input type="text" class="codeinputm" name="captcha"
-                                             /> 
+                                              <input type="text" class="codeinputm" name="captcha" placeholder="عبارت امنیتی را وارد کنید"  /> 
                                 
                                 
                                                <img src="@captcha@" alt="captcha"  title="captcha" class="capcha"/>
-                                              <img src="https://www.freeform.ir/assets/images/sync.png" class="refresh" alt="" bc-triggers="click" 
-                                              name="refresh.captcha" bc-value="true"/>
-                                            
+                                               <svg class="refresh" alt="" bc-triggers="click" 
+                                               name="refresh.captcha" bc-value="true" width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4874 18.6835C20.6511 18.8506 20.7399 19.0615 20.72 19.3102H20.7219L20.4315 22.9104C20.3486 23.9366 18.8213 23.8082 18.9041 22.782L19.0169 21.3819C14.4729 25.398 7.63958 25.1614 3.36822 20.801C1.28685 18.6764 0 15.7415 0 12.5002C0 11.4699 1.53333 11.4699 1.53333 12.5002C1.53333 20.0471 9.2989 24.9189 15.8634 21.6509C16.6999 21.2341 17.4706 20.7022 18.1554 20.0765L16.4414 20.1244C15.4361 20.153 15.3942 18.5939 16.3994 18.5653L19.9374 18.4665C20.15 18.4604 20.3456 18.5439 20.4874 18.6835ZM6.55856 4.87564L4.84454 4.92353C5.52936 4.29786 6.30001 3.76592 7.13657 3.34913C13.7013 0.0812188 21.4666 4.95306 21.4666 12.4999C21.4666 13.5301 22.9999 13.5301 22.9999 12.4999C22.9999 9.25835 21.7132 6.32357 19.6317 4.19905C15.3601 -0.16139 8.52603 -0.397737 3.98302 3.61819L4.09582 2.21805C4.17868 1.1919 2.65134 1.0635 2.56847 2.08966L2.27798 5.68992H2.27997C2.24304 6.15051 2.6054 6.54588 3.06261 6.53367L6.60052 6.43483C7.60578 6.40731 7.5638 4.84814 6.55856 4.87564Z" fill="white"/>
+                                                </svg>
+                                         
                                          </div>
                                         </script>
                                     </face>
                                 </basis>
-                                <div class="News">
-                                  <!-- <!-  <span class="radio">
-                                        <input type="checkbox" name="" id="">
-                                    </span>--> 
-                                    <!--<p>جهت دریافت اخبار به صورت ماهانه، این گزینه را انتخاب کنید.</p>-->
+            
                                 </div>
-                                </div>
-                                <button type="submit" class="schemaBtn" data-btn-add data-btn-submit="" >ارسال </button>
+                                <button type="submit" class="ShowBTN w-max px-[.8em] group/btn rounded-[5px]
+                                hover:bg-dark duration-[.5s]
+                                py-[.4em] bg-main flex justify-center items-center gap-2 schemaBtn" data-btn-add data-btn-submit="">
+                                
+                                   <span class="Icon w-auto flex justify-center items-center">
+                                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 1V8.5M6 2.5L4 0.5L2 2.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        
+                                           
+                                   </span>
+                                   <span class="Text font-Ravi400 font-normal text-[11px] text-white leading-17.05">
+                                     ارسال فرم 
+                                   </span>
+                           </button>
                            
                         </div>
                     </div>
@@ -268,7 +279,7 @@
                     طراحی سایت و بهینه‌سازی سایت
                 </span>
                 <span class="img w-auto flex justify-center items-center">
-                    <img src="[##cms.cmscdn##]/images/copyright.png" title="Namasite" alt="Namasite">
+                    <img src="[##cms.cms.cdn##]/images/copyright.png" title="Namasite" alt="Namasite">
                 </span>
             </a>
         </div>
@@ -276,4 +287,26 @@
 </footer>
 <div class="main-container">
     <span></span>
+</div>
+<div class="MapPOP w-full flex justify-center items-center
+fixed z-[9999] bg-[#2626276a] h-full top-0 left-0 duration-100 pointer-events-none opacity-0 [&.open]:pointer-events-auto [&.open]:opacity-[1]">
+<div class="Box w-[300px] h-[300px] grid grid-cols-[1fr,1fr] grid-rows-[1fr,1fr] 
+ bg-white justify-center items-center relative">
+ <span class="Closemap absolute right-[1em] top-[1em] hover:cursor-pointer ">
+    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 1L16 15M2 15L16 1" stroke="#48494A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        
+ </span>
+    <a href="https://osm.org/go/zSTUh_ND4" class="Link googlemap w-full text-center font-Ravi700 text-base text-dark">
+    گوگل مپ
+    </a>
+    <a href="https://nshn.ir/_bv7OuVxOYgo" class="Link neshan w-full text-center font-Ravi700 text-base text-dark">
+        نشان
+    </a>
+    <a href="https://balad.ir/p/18nEIeo8JyfoW9" class="Link balad w-full text-center font-Ravi700 text-base text-dark">
+        بلد
+    </a>
+</div>
+
 </div>

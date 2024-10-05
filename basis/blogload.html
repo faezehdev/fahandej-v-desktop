@@ -1,0 +1,24 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="[##cms.query.catid##]">
+    <member name="blog" type="list" typeid="159" perpage="100" link="articl.bc"/> 
+</basis>
+  <basis core="print" datamembername="db.blog">
+                       <layout>
+                           @child
+                       </layout>
+                       <face>
+                           <a alt="@title" title="@title" href="@link" class="Blog opacity-0  group w-full h-full flex relative  duration-[1s] hover:scale-[.93]">
+                               <div class="IMG w-full h-full flex justify-center items-center">
+                                   <img src="@type_159" alt="@title" title="@title" class=" w-full h-full duration-[.5s]
+                                    filter grayscale-[1] object-cover group-hover:grayscale-[0]">
+                               </div>
+                               <div class="OV absolute left-0 bottom-0 w-full h-full z-1 flex justify-start items-end">
+                                   <div class="Title w-auto mr-[1em] mb-[1em]">
+                                       <p class="font-Ravi400 text-[13px] duration-[.5s] group-hover:translate-x-[-1em]
+                                        leading-20.15 text-white group-hover:translate-y-[-.8em]">
+                                         @title
+                                       </p>
+                                   </div>
+                               </div>
+                           </a>
+                       </face>
+                   </basis>     
