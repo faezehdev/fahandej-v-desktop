@@ -53,7 +53,10 @@ function showBlog(){
   
   gallery.appendChild(groupDiv);
   }
-  
+  gsap.to('.Blog',{
+    opacity:1,
+    stagger:.2
+  })
   
 }
 showBlog()
@@ -80,4 +83,24 @@ btnF.forEach(b=>{
 
   }, 1000);
   })
+})
+function remove(){
+  document.querySelector('header').classList.remove('dark')
+  document.querySelector('header').classList.remove('darkLogo')
+}
+function add(){
+  document.querySelector('header').classList.add('dark')
+  document.querySelector('header').classList.add('darkLogo')
+}
+gsap.to('.DesktopFooter',{
+
+  scrollTrigger:{
+    trigger:'.DesktopFooter',
+    start:'top top',
+    end:'bottom bottom',
+    onEnter: () =>remove(),
+    onEnterBack: () =>remove(),
+    onLeave: () => add(),
+    onLeaveBack: () =>add(),
+  }
 })
