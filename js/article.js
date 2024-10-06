@@ -31,3 +31,43 @@ projects.forEach(p=>{
 
     })
 })
+document.querySelectorAll('.sharee').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.target.parentElement.classList.toggle('share__wrapper--active');
+    e.target.classList.toggle('toggle-button--active');
+  });
+});
+
+  // share blog
+  let whatsapp = document.querySelector('.share__wrapper .whatsapp')
+  let twitter = document.querySelector('.share__wrapper .twitter')
+  let instagram = document.querySelector('.share__wrapper .instagram')
+  let proLink = document.querySelector('.bloglink').getAttribute('datalink')
+ console.log('link',proLink);
+ let url = window.location.href 
+  whatsapp.setAttribute('href',`https://api.whatsapp.com/send?text=${proLink}`)
+  instagram.setAttribute('href',`https://www.instagram.com/?url=${proLink}`)
+  twitter.setAttribute('href',`"https://twitter.com/intent/tweet?url=${proLink}`)
+  function add(){
+    console.log('enter');
+    
+    document.querySelector('header').classList.remove('dark')
+    document.querySelector('header').classList.remove('darkLogo')
+  }
+  function remove(){
+    console.log('leave');
+    document.querySelector('header').classList.add('dark')
+    document.querySelector('header').classList.add('darkLogo')
+  }
+  gsap.to('.DesktopFooter',{
+  
+    scrollTrigger:{
+      trigger:'.DesktopFooter',
+      start:'top top',
+      end:'bottom bottom',
+      onEnter: () =>add(),
+      onEnterBack: () =>remove(),
+      onLeave: () => add(),
+      onLeaveBack: () =>remove(),
+    }
+  })
