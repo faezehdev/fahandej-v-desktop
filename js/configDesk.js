@@ -25,9 +25,9 @@ let closeSearch = document.querySelector('header .CloseSearch')
 let Searchs = document.querySelector('header .searchs')
 let input = document.querySelector('.InputBox')
 searchIcon.addEventListener('click',()=>{
-    input.classList.toggle('OpenS')
-    searchIcon.classList.toggle('OpenS')
-    Searchs.classList.toggle('OpenS')
+    input.classList.add('OpenS')
+    searchIcon.classList.add('OpenS')
+    Searchs.classList.add('OpenS')
 
     if(searchIcon.classList.contains('OpenS')){
         let inputt = document.querySelector('header input#search')
@@ -38,7 +38,7 @@ searchIcon.addEventListener('click',()=>{
            else{
                console.log('val',input.value);
                setTimeout(()=>{
-              window.location.href = `/search.bc?q=${input.value}`
+              window.location.href = `/search.bc?q=${inputt.value}`
                },1000)}
     }
     else{
@@ -54,6 +54,25 @@ searchIcon.addEventListener('click',()=>{
                },1000)}
     }
 })
+let inputt = document.querySelector('header input#search')
+inputt.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      if(inputt.value != ''){
+        event.preventDefault();
+      console.log('clicked');
+  console.log('val',inputt );
+  console.log('val',inputt.value);
+    window.location.href = `/search.bc?q=${inputt.value}`
+  setTimeout(() => {
+   
+  }, 1000);
+      }
+  
+  
+    }
+  });
 closeSearch.addEventListener('click',()=>{
     input.classList.toggle('OpenS')
     searchIcon.classList.toggle('OpenS')

@@ -48,11 +48,14 @@ document.querySelectorAll('.sharee').forEach(btn => {
   whatsapp.setAttribute('href',`https://api.whatsapp.com/send?text=${proLink}`)
   instagram.setAttribute('href',`https://www.instagram.com/?url=${proLink}`)
   twitter.setAttribute('href',`"https://twitter.com/intent/tweet?url=${proLink}`)
-  function remove(){
+  function add(){
+    console.log('enter');
+    
     document.querySelector('header').classList.remove('dark')
     document.querySelector('header').classList.remove('darkLogo')
   }
-  function add(){
+  function remove(){
+    console.log('leave');
     document.querySelector('header').classList.add('dark')
     document.querySelector('header').classList.add('darkLogo')
   }
@@ -62,9 +65,9 @@ document.querySelectorAll('.sharee').forEach(btn => {
       trigger:'.DesktopFooter',
       start:'top top',
       end:'bottom bottom',
-      onEnter: () =>remove(),
+      onEnter: () =>add(),
       onEnterBack: () =>remove(),
       onLeave: () => add(),
-      onLeaveBack: () =>add(),
+      onLeaveBack: () =>remove(),
     }
   })

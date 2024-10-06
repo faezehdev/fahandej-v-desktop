@@ -2006,6 +2006,10 @@ video {
   gap: 0.5em;
 }
 
+.gap-\[1em\] {
+  gap: 1em;
+}
+
 .gap-\[2\.8em\] {
   gap: 2.8em;
 }
@@ -3717,12 +3721,88 @@ video {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "IRANSansWeb300";
+
+  src: url("../_fonts/IRANSansWeb(FaNum)_Light.eot");
+
+  src: url("../_fonts/IRANSansWeb(FaNum)_Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum)_Light.woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum)_Light.ttf") format("truetype");
+
+  font-weight: 300;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSansWeb400";
+
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot");
+
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSansWeb500";
+
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot");
+
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "IRANSansWeb700";
+
+  src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot");
+
+  src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum)_Bold.woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum)_Bold.woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum)_Bold.ttf") format("truetype");
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
 body {
   transition: 0.3s ease-out;
   overflow-x: hidden;
   direction: rtl;
   margin: 0;
   padding: 0;
+}
+
+.faNum{
+  font-family: "IRANSansWeb300";
 }
 
 * {
@@ -3971,21 +4051,21 @@ ul,li,p,h1,h2,h3,h4,h5,h6{
 .Home .Section-1 .swiper-pagination .swiper-pagination-bullet::before{
   content: '';
   position: absolute;
-  left: 55%;
-  bottom:-70%;
-  width: calc(100% + 100px);
-  height: 100%;
+  left:0;
+  bottom:0;
+  width: 20px;
+  height: 20px;
   z-index: 2;
-  transition: all 10s ease;
-  -webkit-transition: all 10s ease;
-  -moz-transition: all 10s ease;
-  -ms-transition: all 10s ease;
-  -o-transition: all 10s ease;
-  transform:rotate(-50deg) translateX(-50%) translateY(-30%);
-  -webkit-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
-  -moz-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
-  -ms-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
-  -o-transform:rotate(-50deg) translateX(-50%) translateY(-30%) ;
+  transition: all 15s ease;
+  -webkit-transition: all 15s ease;
+  -moz-transition: all 15s ease;
+  -ms-transition: all 15s ease;
+  -o-transition: all 15s ease;
+  transform:rotate(-45deg) translate(-50%, 0);
+  -webkit-transform:rotate(-45deg) translate(-50%, 0);
+  -moz-transform:rotate(-45deg) translate(-50%, 0);
+  -ms-transform:rotate(-45deg) translate(-50%, 0);
+  -o-transform:rotate(-45deg) translate(-50%, 0);
 }
 
 .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet-active{
@@ -4004,21 +4084,17 @@ ul,li,p,h1,h2,h3,h4,h5,h6{
 .Home .Section-1 .swiper-pagination .swiper-pagination-bullet-active::before{
   content: '';
   position: absolute;
-  left: 55%;
-  bottom:-70%;
-  width: calc(100% + 100px);
   background-color: #8F993C;
-  height: calc(100% + 100px);
   z-index: 2;
   animation: change-height;
   -webkit-animation: change-height;
-  animation-duration: 10s !important;
+  animation-duration: 15s !important;
   transform-origin: center;
-  transition: all 10s ease;
-  -webkit-transition: all 10s ease;
-  -moz-transition: all 10s ease;
-  -ms-transition: all 10s ease;
-  -o-transition: all 10s ease;
+  transition: all 15s ease;
+  -webkit-transition: all 15s ease;
+  -moz-transition: all 15s ease;
+  -ms-transition: all 15s ease;
+  -o-transition: all 15s ease;
 }
 
 .Home .Section-1 .swiper-pagination .swiper-pagination-bullet-active{
@@ -4035,7 +4111,7 @@ ul,li,p,h1,h2,h3,h4,h5,h6{
   }
 
   100% {
-    height: calc(100% + 100px);
+    height:20px;
   }
 }
 
@@ -4168,19 +4244,53 @@ header.dark .Icon svg path {
   stroke: #262627;
 }
 
-.searchs input{
-  background-color: transparent;
-  color: #262627
-;
+.header-inner .InputBox input[type="text"]{
+  background-color: transparent !important;
   font-size: 13px;
   font-weight: 400;
   line-height: 21px;
   font-family:'Ravi400';
-  border-bottom:  1px solid #262627;
   outline: none;
 }
 
-.searchs input::-moz-placeholder{
+header.dark .header-inner .InputBox input[type="text"]::-moz-placeholder{
+  color: #262627 !important;
+}
+
+header.dark .header-inner .InputBox input[type="text"]::placeholder{
+  color: #262627 !important;
+}
+
+header.dark .header-inner .InputBox input[type="text"]{
+  border-bottom:  1px solid #262627 !important;
+}
+
+header .header-inner .InputBox input[type="text"]{
+  border-bottom:  1px solid white !important;
+}
+
+header .header-inner .InputBox input[type="text"]::-moz-placeholder{
+  color: white !important;
+}
+
+header .header-inner .InputBox input[type="text"]::placeholder{
+  color: white !important;
+}
+
+.header-inner .InputBox input[type="text"]:focus-visible,
+.header-inner .InputBox input[type="text"]:focus,
+.header-inner .InputBox input[type="text"]:active{
+  background-color: transparent;
+  color: #262627
+  ;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 21px;
+  font-family:'Ravi400';
+  outline: none;
+}
+
+.header-inner .InputBox input[type="text"]::-moz-placeholder{
   color: #262627 !important;
   font-size: 13px;
   font-weight: 400;
@@ -4189,8 +4299,7 @@ header.dark .Icon svg path {
   opacity:  1 !important;
 }
 
-.searchs input::-moz-placeholder,
-.searchs input::placeholder{
+.header-inner .InputBox input[type="text"]::placeholder{
   color: #262627 !important;
   font-size: 13px;
   font-weight: 400;
@@ -4658,7 +4767,7 @@ footer [data-bc-answer-container] input[type="password"]:focus,
 footer [data-bc-answer-container] input[type="time"]:focus,
 footer [data-bc-answer-container] input[type="color"]:focus, 
 footer [data-bc-answer-container] input[type="file"]:focus,
-footer [data-bc-answer-container] textarea:focus
+footer [data-bc-answer-container] textarea:focus,
 footer [data-bc-answer-container] select:focus-visible,
 footer [data-bc-answer-container] select:focus-visible,
 footer [data-bc-answer-container] textarea:focus-visible
@@ -4901,6 +5010,31 @@ footer.darkSection{
   font-family:"Ravi400";
   line-height: 21px;
   color:  #262627;
+}
+
+footer .Details .Row.phone .Answer p:not(:last-child),
+footer .Details .Row.phone .Answer span:not(:last-child){
+  position: relative;
+}
+
+footer .Details .Row.phone .Answer p:not(:last-child)::before{
+  position: absolute;
+  left: -14%;
+  top: 50%;
+  width: 7px;
+  height: 1px;
+  background-color: white;
+  content: '';
+}
+
+footer .Details .Row.phone .Answer span:not(:last-child)::before{
+  position: absolute;
+  left: -14%;
+  top: 50%;
+  width: 7px;
+  height: 1px;
+  background-color: white;
+  content: '';
 }
 
 @media (min-width: 480px) {

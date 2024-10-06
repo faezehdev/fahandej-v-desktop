@@ -84,11 +84,14 @@ btnF.forEach(b=>{
   }, 1000);
   })
 })
-function remove(){
+function add(){
+  console.log('enter');
+  
   document.querySelector('header').classList.remove('dark')
   document.querySelector('header').classList.remove('darkLogo')
 }
-function add(){
+function remove(){
+  console.log('leave');
   document.querySelector('header').classList.add('dark')
   document.querySelector('header').classList.add('darkLogo')
 }
@@ -98,9 +101,9 @@ gsap.to('.DesktopFooter',{
     trigger:'.DesktopFooter',
     start:'top top',
     end:'bottom bottom',
-    onEnter: () =>remove(),
+    onEnter: () =>add(),
     onEnterBack: () =>remove(),
     onLeave: () => add(),
-    onLeaveBack: () =>add(),
+    onLeaveBack: () =>remove(),
   }
 })

@@ -4,7 +4,7 @@
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9639">
    <member name="social" type="view" postsql="select * from [db.social] where TypeID=245"/> 
 </basis>
-<footer class="DesktopFooter h-full w-full darkSection flex justify-center items-center">
+<footer class="DesktopFooter h-full w-full darkSection flex justify-center items-center mainSlide">
     <div class="footer w-full h-full flex flex-col justify-center items-center">
         <div class="Top w-full h-full flex justify-start items-start">
             <div class="Map-Container h-full relative w-full flex justify-center items-center" >
@@ -52,43 +52,84 @@
                           </basis>
                         
                         </div>
-                        <div class="Row w-full flex justify-start gap-1">
+                        <div class="Row w-full phone flex justify-start gap-1">
                             <span class="Question font-Ravi400 font-normal text-[13px] leading-21 text-white">
                               تلفن دفتر مرکزی:
                             </span>
-                            <span class="Answer w-auto flex justify-start font-Ravi400 font-normal text-[13px] leading-21 text-white">
+                            <span class="Answer gap-[1em] w-auto flex justify-start font-Ravi400 font-normal text-[13px] leading-21 text-white">
                                 <basis core="print" datamembername="db.contactus">
                                     <layout>
                                         @child
                                     </layout>
                                     <face filter="TypeID=240">
-                                <span class="font-Ravi400 font-normal text-[13px] leading-21 text-white">
+                                <span class="faNum font-Ravi400 font-normal text-[13px] leading-21 text-white">
                                @Answer
                               </span>
                                     </face>
                                 </basis>
                             </span>
                           </div>
-                          <!-- <div class="Row w-full flex justify-start gap-1">
-                            <span class="Question font-Ravi400 font-normal text-[13px] leading-21 text-white">
-                                شماره تلفن واحد فروش: ...
-                            </span>
-                            <span class="Answer w-auto flex justify-start font-Ravi400 font-normal text-[13px] leading-21 text-white">
-                                <a href="" class="font-Ravi400 font-normal text-[13px] leading-21 text-white">
-                                 ۲۲۳۶۰۴۷۸ -۲۲۰۶۶۰۹۳
-                              </a>
-                            </span>
-                          </div> -->
-                          <!-- <div class="Row w-full flex justify-start gap-1">
-                            <span class="Question font-Ravi400 font-normal text-[13px] leading-21 text-white">
-                                شماره تلفن واحد فروش: ...
-                            </span>
-                            <span class="Answer w-auto flex justify-start font-Ravi400 font-normal text-[13px] leading-21 text-white">
-                                <a href="" class="font-Ravi400 font-normal text-[13px] leading-21 text-white">
-                                 ۲۲۳۶۰۴۷۸ -۲۲۰۶۶۰۹۳
-                              </a>
-                            </span>
-                          </div> -->
+                          <basis core="dbsource" name="db" source="basiscore" lid="1" mid="10" usedforid="2362361">
+                            <member name="sale" type="view" />
+                        </basis>
+                        
+                        <basis core="dbsource" name="db" source="basiscore" lid="1" mid="10" usedforid="2362338">
+                            <member name="supply" type="view" />
+                        </basis>
+                        <div class="Row phone w-full flex justify-start gap-1">
+                            <basis core="print" datamembername="db.sale">
+                               
+                                <face filter="TypeID=150">
+                                    <span class="Question whitespace-nowrap font-Ravi400 font-normal text-[13px] leading-21 text-white">
+                                        شماره تلفن @Answer :
+                                    </span>
+                                    
+                                </face>
+                            </basis>
+
+                            <basis core="print" datamembername="db.sale">
+                                <layout>
+                                    <span class="Answer gap-[1em] w-auto flex justify-start font-Ravi400 font-normal text-[13px] leading-21 text-white">
+                                        @child
+                                    </span>
+                                </layout>
+                                
+                                <face filter="TypeID=240">
+                                    
+                                    <p class="faNum font-Ravi400 whitespace-nowrap font-normal text-[13px] leading-21 text-white">
+                                     @Answer
+                                    </p>
+                                </face>
+                            </basis>
+                          </div>
+                          
+                          <div class="Row phone w-full flex justify-start gap-1">
+                            <basis core="print" datamembername="db.supply">
+                              
+                             
+                                <face filter="TypeID=150"> 
+                                    <span class="Question whitespace-nowrap font-Ravi400 font-normal text-[13px] leading-21 text-white">
+                                        شماره تلفن @Answer: 
+                                    </span>
+                                    
+                                </face>
+                            </basis>
+
+                            <basis core="print" datamembername="db.supply">
+                                <layout>
+                                    <span class=" gap-[1em] Answer w-auto flex justify-start font-Ravi400 font-normal text-[13px] leading-21 text-white">
+                                        @child
+                                      </span>
+                                  </layout>
+                                  
+                                  <face filter="TypeID=240">
+                                    <p class="faNum  font-Ravi400 whitespace-nowrap font-normal text-[13px] leading-21 text-white">
+                                     @Answer
+                                    </p>
+                                    
+                                </face>
+                            </basis>
+                        </div>
                     </div>
                     <div class="Socials py-[1em] w-full flex justify-start items-center gap-3">
                         <basis core="print" datamembername="db.social">
