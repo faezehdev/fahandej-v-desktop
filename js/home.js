@@ -244,17 +244,45 @@ $('.Home').imagesLoaded( {
 
 },  function() {
     $(document).ready(function() {
-      
-gsap.to(".Loading-Container svg", {
-  opacity: 0,
-  delay: 2,
-  ease: "expo.in",
-});
-gsap.to(".Loading-Container", {
-  scale: 0,
-  delay: 3,
-  ease: "expo.in",
-});
+
+        let lazyVideos = [...document.querySelectorAll("video.lazy")]
+       
+        if ("IntersectionObserver" in window) {
+          let lazyVideoObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(video) {
+              if (video.isIntersecting) {
+                for (let source in video.target.children) {
+                  let videoSource = video.target.children[source];
+                  if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                    videoSource.src = videoSource.dataset.src;
+                  }
+                }
+       
+                video.target.load();
+                video.target.classList.remove("lazy");
+                lazyVideoObserver.unobserve(video.target);
+              }
+            });
+           });
+       
+       
+          lazyVideos.forEach(function(lazyVideo) {
+            lazyVideoObserver.observe(lazyVideo);
+          });
+          gsap.to(".Loading-Container svg", {
+            opacity: 0,
+            delay: 8,
+            ease: "expo.in",
+          });
+          gsap.to(".Loading-Container", {
+            opacity: 0,
+            pointerEvents:'none',
+            delay: 8,
+            ease: "expo.in",
+          });
+        }
+
+
       setTimeout(() => {
         const interleaveOffset = 0.5;
         // main slider
@@ -372,27 +400,36 @@ gsap.to(".Loading-Container", {
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0.322887 4.22048C-0.107629 4.651 -0.107629 5.349 0.322887 5.77952L4.22048 9.67711C4.651 10.1076 5.349 10.1076 5.77952 9.67711L9.67711 5.77952C10.1076 5.349 10.1076 4.651 9.67711 4.22048L5.77952 0.322887C5.349 -0.107629 4.651 -0.107629 4.22048 0.322887L0.322887 4.22048ZM3.12915 4.68819C2.95695 4.8604 2.95695 5.1396 3.12915 5.31181L4.68819 6.87084C4.8604 7.04305 5.1396 7.04305 5.31181 6.87084L6.87085 5.31181C7.04305 5.1396 7.04305 4.8604 6.87084 4.68819L5.31181 3.12915C5.1396 2.95695 4.8604 2.95695 4.68819 3.12915L3.12915 4.68819Z" fill="#8F993C"/>
               </svg>
               `
-     
-      
-            // banner slider
-            let SwiperBanner= new Swiper ('.swiper-banner', {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                speed:5000,
-                effect:'fade' ,
-                autoplay:{
-                    delay:2000
-                },
-                pagination: {
-                    el: '.Section-1 .swiper-pagination',
-                    clickable: true,
-                    type: 'bullets',
-                    renderBullet: function (index, className) {
-                    return '<span class="' + className + '">'  + '</span>';
-                
-                    }
+              setTimeout(() => {
+                // banner slider
+                let SwiperBanner= new Swiper ('.swiper-banner', {
+                  slidesPerView: 1,
+                  spaceBetween: 0,
+                  effect:'fade' ,
+                  loop:true,
+                  fadeEffect: {
+                    crossFade: true,
                   },
-                }) 
+                  autoplay: {
+                    delay:6000,
+                    // delay:7000,
+                    // disableOnInteraction: false,
+                  },
+                 speed:6000,
+                  pagination: {
+                      el: '.Section-1 .swiper-pagination',
+                      clickable: true,
+                      type: 'bullets',
+                      renderBullet: function (index, className) {
+                      return '<span class="' + className + '">'  + '</span>';
+                  
+                      }
+                    },
+                  }) 
+           }, 5000);
+   
+     
+
                 
 // projects hover
 let projects = document.querySelectorAll('.Project')

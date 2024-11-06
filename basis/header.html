@@ -9,14 +9,18 @@
        <div class="Right w-full flex justify-start items-center">
            <div class="Items w-full flex justify-start items-center gap-[2.8em]">
                <span class="Item w-auto flex justify-center items-center">
-                   <div class="Toggles w-max flex flex-col gap-[3px] hover:cursor-pointer">
-                       <span class="toggle-item w-[18px] h-[1px] bg-white duration-75 group-[&.dark]:bg-dark2"></span>
-                       <span class="toggle-item w-[18px] h-[1px] bg-white duration-75 group-[&.dark]:bg-dark2"></span>
-                       <span class="toggle-item w-[18px] h-[1px] bg-white duration-75 group-[&.dark]:bg-dark2"></span>
+                   <div class="Toggles w-max group/tog flex flex-col gap-[3px] hover:cursor-pointer">
+                       <span class="toggle-item w-[18px] h-[1px] bg-white duration-75 group-hover/tog:bg-main
+                        group-[&.dark]:bg-dark2"></span>
+                       <span class="toggle-item w-[18px] h-[1px] bg-white duration-75 group-[&.dark]:bg-dark2
+                       group-hover/tog:bg-main"></span>
+                       <span class="toggle-item w-[18px] h-[1px] bg-white duration-75 group-[&.dark]:bg-dark2
+                       group-hover/tog:bg-main"></span>
                    </div>
                </span>
                <span class="Item w-auto flex justify-center items-center">
-                   <a href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها" class="Link hover:text-main duration-75 group-[&.dark]:text-dark2
+                   <a href="مجتمع-های-مسکونی " alt="پروژه‌ها" title="پروژه‌ها" 
+                   class="Link hover:!text-main duration-75 group-[&.dark]:text-dark2
                     font-Ravi400 font-normal leading-24 text-[15px] text-white">
                        پروژه‌ها
                    </a>
@@ -41,8 +45,8 @@
                    </div>
                  
                </span>
-               <span class="Item w-auto flex justify-center group-[&.dark]:text-dark2
-                items-center font-EncodeSans500 font-medium leading-18.75
+               <span class="Item w-auto flex justify-center duration-75 hover:!text-main hover:cursor-pointer group-[&.dark]:text-dark2
+                items-center font-Ravi500 font-medium leading-18.75
                text-white">
                    En
                </span>
@@ -118,15 +122,15 @@
    <div class="Middle overflow-hidden w-full flex justify-center items-center h-[60%]">
        <ul class="Menu overflow-hidden h-full w-full flex flex-col justify-center items-center gap-6">
            <li class="Menu-Item w-full flex justify-center items-center overflow-hidden">
-               <a href="/" title="Fahandej" alt="Fahandej" class="Menu-Link  hover:text-main opacity-0
+               <a href="/" title=" صفحه‌ی نخست" alt=" صفحه‌ی نخست" class="Menu-Link  hover:text-main opacity-0
                duration-75 font-Ravi500 font-medium text-xl leading-31 text-dark2">
                    صفحه‌ی نخست
                </a>
            </li>
            <li class="Menu-Item w-full flex justify-center items-center overflow-hidden">
-               <a href=" درباره‌ی-ما" title="درباره‌ی ما " alt="درباره‌ی ما " class="Menu-Link  hover:text-main opacity-0
+               <a href="درباره-ما" title="درباره‌ما " alt="درباره‌ما" class="Menu-Link  hover:text-main opacity-0
                 duration-75 font-Ravi500 font-medium text-xl leading-31 text-dark2">
-                درباره‌ی ما
+                درباره‌ی‌ما
                </a>
            </li>
            <li class="Menu-Item w-full flex justify-center items-center overflow-hidden">
@@ -144,13 +148,13 @@
            <li class="Menu-Item w-full flex justify-center items-center overflow-hidden">
                <a href="تماس-با-ما"  title="تماس‌باما" alt="تماس‌باما" class="Menu-Link  hover:text-main opacity-0
                duration-75 font-Ravi500 font-medium text-xl leading-31 text-dark2">
-                   تماس با ما
+                   تماس‌باما
                </a>
            </li>
        </ul>
    </div>
    <div class="Bottom w-full flex h-[20%] justify-center items-end">
-     <div class="Socials py-[1em] w-full flex justify-center items-center bg-dark2 gap-3">
+     <div class="Socials py-[1em] w-full flex justify-center items-center bg-dark2 gap-[1.2em]">
        <basis core="print" datamembername="db.social">
            <layout>
                @child

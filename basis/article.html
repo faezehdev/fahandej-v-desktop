@@ -1,19 +1,22 @@
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="article" type="view"/> 
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="title" type="view" postsql="select * from [db.title] where TypeID=150"/> 
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
-    <member name="det" type="view" postsql="select * from [db.det] where TypeID=128"/> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="det" type="view" postsql="select * from [db.det] where prpID=7248"/> 
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
+    <member name="date" type="view" postsql="select * from [db.date] where prpID=7249"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="text" type="view" postsql="select * from [db.text] where TypeID=250"/> 
 </basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]"> 
     <member name="articleGallery" type="list" format="4"/> 
 </basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2362515"> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="related-project" type="list" blgid="1611" size="298x450"/> 
 </basis>	    
 <basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
@@ -46,26 +49,26 @@
                     </h1>
                 </div>
                <div class="Det w-full flex justify-between items-start gap-3">
-                <div class="Right w-[50%] flex flex-col items-start justify-start">
+                <div class="Right w-[50%] flex gap-[1em]  items-start justify-start">
                     <span class="Author w-auto flex justify-center 
                     items-center font-Ravi400 font-normal text-[11px] leading-17.05 text-dark">
                         نویسنده: <basis core="print" datamembername="db.det">
                             <layout>
                                 @child
                             </layout>
-                            <face filter="RowNumber=1">
-                                @largetext
+                            <face >
+                                @text
                             </face>
                         </basis>
                     </span>
-                    <span class="Date w-auto flex justify-center font-Ravi400 font-normal text-[11px] leading-17.05 text-dark
+                    <span class="faNum Date w-auto flex justify-center font-Ravi400 font-normal text-[11px] leading-17.05 text-dark
                     items-center">
-                    <basis core="print" datamembername="db.det">
+                    <basis core="print" datamembername="db.date">
                         <layout>
                             @child
                         </layout>
-                        <face filter="RowNumber=2">
-                            @largetext
+                        <face >
+                            @text
                         </face>
                     </basis>
                     </span>
@@ -160,7 +163,7 @@
                              </h4>
                         </div>
                         <div class="projects w-full flex justify-center items-center mt-[3em] mb-[6em]">
-                            <div class="Projects-Container w-full min-h-[336px] grid grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr] gap-0 h-full">
+                            <div class="Projects-Container w-full min-h-[336px] flex  gap-4 h-full">
                     @child
                         </div>
                         </div>
@@ -169,12 +172,12 @@
                     </div>
                 </layout>
                 <face>
-                    <a href="@link"  alt="@title" title="@title" class="Project w-[90%] h-full before:content-[''] before:absolute
+                    <a href="@link"  alt="@title" title="@title" class="Project w-[18%] h-[500px] before:content-[''] before:absolute
                     before:left-0 before:top-0 before:h-full before:w-full before:opacity-0 [&.hide]:before:opacity-[1]
                    before:z-3 before:bg-[#26262773] before:duration-[.7s] [&.onn]:before:opacity-0
-                      relative hover:w-[95%] duration-[.7s] ease-in-out">
+                      relative hover:w-[24%] duration-[.7s] ease-in-out">
                          <div class="IMG w-full flex justify-center h-full items-center">
-                             <img src="i00298X00450prp" alt="@title" title="@title" class="w-full h-full object-cover">
+                             <img src="@00298X00450prp" alt="@title" title="@title" class="w-full h-full object-cover">
                          </div>
                          <div class="OV absolute left-0 top-0 z-1 w-full h-full flex justify-end items-end">
                              <div class="Title w-full flex py-[1.5em] justify-center items-center">
@@ -192,7 +195,6 @@
     </main>
     <basis core="call" file="script.inc" />
     <script src="[##cms.cms.cdn##]/js/article.js"></script>
-    <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
     <script type="application/ld+json"> 
         [##json.fq.column1##] 
         </script>

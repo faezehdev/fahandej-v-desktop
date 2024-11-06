@@ -47,7 +47,7 @@ document.querySelectorAll('.sharee').forEach(btn => {
  let url = window.location.href 
   whatsapp.setAttribute('href',`https://api.whatsapp.com/send?text=${proLink}`)
   instagram.setAttribute('href',`https://www.instagram.com/?url=${proLink}`)
-  twitter.setAttribute('href',`"https://twitter.com/intent/tweet?url=${proLink}`)
+  twitter.setAttribute('href',`https://twitter.com/intent/tweet?url=${proLink}`)
   function add(){
     console.log('enter');
     
@@ -59,11 +59,12 @@ document.querySelectorAll('.sharee').forEach(btn => {
     document.querySelector('header').classList.add('dark')
     document.querySelector('header').classList.add('darkLogo')
   }
+  gsap.registerPlugin(ScrollTrigger)
   gsap.to('.DesktopFooter',{
   
     scrollTrigger:{
       trigger:'.DesktopFooter',
-      start:'top top',
+      start:'top 20%',
       end:'bottom bottom',
       onEnter: () =>add(),
       onEnterBack: () =>remove(),

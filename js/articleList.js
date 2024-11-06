@@ -71,7 +71,7 @@ btnF.forEach(b=>{
     b.querySelector('.ShowBTN').classList.remove('active')
   })
   e.currentTarget.classList.add('active')
-  e.currentTarget.querySelector('.ShowBTN').classList.remove('active')
+  e.currentTarget.querySelector('.ShowBTN').classList.add('active')
   var url = `/load-blog.inc?catid=${catid}`;
   $(".Articles").load(url);
   setTimeout(() => {

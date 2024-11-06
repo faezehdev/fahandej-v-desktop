@@ -341,10 +341,20 @@ a {
     -o-transform: rotate(45deg);
     position: relative;
     overflow: hidden;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
 }
 .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet{
     width: 20px;
     height: 20px;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
 
 }
 .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet svg{
@@ -360,42 +370,42 @@ a {
     width: 20px;
     height: 20px;
     z-index: 2;
-    transition: all 15s ease;
-    -webkit-transition: all 15s ease;
-    -moz-transition: all 15s ease;
-    -ms-transition: all 15s ease;
-    -o-transition: all 15s ease;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
     transform:rotate(-45deg) translate(-50%, 0);
     -webkit-transform:rotate(-45deg) translate(-50%, 0);
     -moz-transform:rotate(-45deg) translate(-50%, 0);
     -ms-transform:rotate(-45deg) translate(-50%, 0);
     -o-transform:rotate(-45deg) translate(-50%, 0);
+    background-color: transparent;
 }
 .Home .swiper-Container > .swiper-pagination .swiper-pagination-bullet-active{
     background-color: transparent;
     margin: 0;
 }
 .Home .Section-1 .swiper-pagination .swiper-pagination-bullet-active{
-    transition: all .8s ease;
-    -webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    -o-transition: all .8s ease;
+  transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  -moz-transition: all .8s ease;
+  -ms-transition: all .8s ease;
+  -o-transition: all .8s ease;
+
 }
 .Home .Section-1 .swiper-pagination .swiper-pagination-bullet-active::before{
     content: '';
     position: absolute;
     background-color: #8F993C;
     z-index: 2;
-    animation: change-height;
-    -webkit-animation: change-height;
-    animation-duration: 15s !important;
-    transform-origin: center;
-    transition: all 15s ease;
-    -webkit-transition: all 15s ease;
-    -moz-transition: all 15s ease;
-    -ms-transition: all 15s ease;
-    -o-transition: all 15s ease;
+    animation: change-height 20s;
+    -webkit-animation: change-height 20s;
+    transition: all 20s ease;
+    -webkit-transition: all 20s ease;
+    -moz-transition: all 20s ease;
+    -ms-transition: all 20s ease;
+    -o-transition: all 20s ease;
 }
 .Home .Section-1 .swiper-pagination .swiper-pagination-bullet-active{
     transform:rotate(45deg) scale(1.2);
@@ -445,7 +455,7 @@ a {
     background-repeat: repeat;
   }
   .bgContact{
-    background: url('../images/bgContact.png');
+    background: url('../images/bg-pattern.png');
     background-repeat: repeat;
   }
   footer .Map-Container::before
@@ -457,7 +467,7 @@ a {
   height: 100%;
   width: 100%;
   z-index: 4;
-  background: #000000eb;
+  background-color: rgb(38 38 39 / 0.95);
   opacity: .7;
   pointer-events: none;
 
@@ -478,6 +488,9 @@ background: #000000c9;
   header.dark .Icon svg path {
     stroke: #48494A;
   }
+  header svg:hover path{
+    stroke: #8f993c !important;
+  }
   .Projects-Container .Project .OV .Title{
     background: linear-gradient(360deg, #262627 0%, rgba(38, 38, 39, 0) 100%);
     backdrop-filter: blur(4px)
@@ -496,7 +509,7 @@ background: #000000c9;
   grid-template-rows: repeat(2,48.5%);
 }
 .Articles .Row:nth-child(even) {
-  grid-template-columns: 1fr 1fr .8fr .8fr ;
+  grid-template-columns: .8fr .8fr .8fr 1fr ;
 }
 .Articles .Row:nth-child(even) .innerRow{
 order: 2;
@@ -523,9 +536,7 @@ order: 2;
   backdrop-filter: blur(4px);
 
 }
-.searchs.OpenS svg path{
-  stroke: #262627;
-}
+
 .header-inner .InputBox input[type="text"]{
   background-color: transparent !important;
   font-size: 13px;
@@ -534,6 +545,12 @@ order: 2;
   font-family:'Ravi400';
   outline: none;
 }
+header.dark .searchs.OpenS svg path{
+stroke: #262627;
+}
+header .searchs.OpenS svg path{
+  stroke: white;
+  }
 header.dark .header-inner .InputBox input[type="text"]::placeholder{
   color: #262627 !important;
 }
@@ -584,7 +601,16 @@ justify-content: center;
 align-items: center;
 padding: 0 .5em;
 outline: none;
+font-family:'Ravi400';
 border: 1px solid #8F993C;
+  }
+  .Search-Container .InputBoxes input[type='text']::placeholder{
+    font-size: 13px;
+font-weight: 400;
+line-height: 21px;
+color: #48494A;
+outline: none;
+font-family:'Ravi400';
   }
   .Search-Container .InputBoxes input::placeholder,
   .Search-Container .InputBoxes input:placeholder-shown{
@@ -593,6 +619,8 @@ font-weight: 400;
 line-height: 21px;
 color: #48494A;
 outline: none;
+font-family:'Ravi400';
+
   }
   .Search-Container .InputBoxes input:active{
     outline: none;
@@ -1000,6 +1028,7 @@ footer [data-bc-answer-container] select:focus-visible{
   -moz-border-radius: 0 !important;
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #8F993C;
 }
 
 footer .Box{
@@ -1169,8 +1198,14 @@ img.capcha{
   background-color: white;
 }
 footer.darkSection{
-height: 100vh;
-background-color: #262627;
+  height: 100vh;
+  background: #262627;
+  z-index: 0;
+
+}
+footer .footer {
+  position: absolute;
+  z-index: 100;
 }
 .article-Show .content h3{
   font-size: 16px;
@@ -1210,3 +1245,98 @@ footer .Details .Row.phone .Answer p:not(:last-child)::before{
     background-color: white;
     content: '';
     }
+    .Search-Container .BGSection::before{
+      z-index: 0 !important; 
+  }
+  .Search-Container .Search-C {
+    min-height: 100vh;
+  }
+  .BGSection{
+    position: relative;
+  }
+  main.Home .Section-2 .BGSection::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffcc;
+
+  }
+  main.Home .Section-2 .Title-1,
+  main.Home .Section-2 .Title-2,
+  main.Home .Section-2 .Text,
+  main.Home .Section-2 .Btn  {
+position: relative;
+z-index: 5;
+  }
+  main.Home .Section-2 .IMG{
+    position: relative;
+  }
+  main.Home .Section-2 .IMG::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+
+  }
+  
+.Form-Container select option:checked,
+.Form-Container select option:hover,
+.Form-Container select option:active,
+.Form-Container select option:focus,
+.Form-Container select option:focus-visible,
+.Form-Container select option:current{
+  background-color: #8F993C !important;
+}
+  .Map-Container > img{
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+  }
+  footer{
+    position: relative;
+  }
+  footer::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    z-index: -1;
+    background-color: rgb(3 3 4 / 95%);
+    height: 100%;
+    width: 100%;
+  }
+  .Search-Container .Text p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  footer .PointerBox {
+    margin-right: auto;
+    width: 78%;
+  }
+  footer .OverBox .Middle {
+    margin-bottom: auto;
+    height: 82%;
+  }
+
+  @media only screen and (min-width: 1800px) {
+    footer .PointerBox {
+      margin-right: auto;
+      width: 77%;
+    }
+  }
