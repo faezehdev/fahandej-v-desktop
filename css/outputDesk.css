@@ -2052,6 +2052,14 @@ video {
   gap: 3px;
 }
 
+.gap-\[1\] {
+  gap: 1;
+}
+
+.gap-\[1\.1em\] {
+  gap: 1.1em;
+}
+
 .gap-x-1 {
   -moz-column-gap: 0.25rem;
        column-gap: 0.25rem;
@@ -4705,6 +4713,7 @@ footer [data-bc-question] {
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin: 0;
 }
 
 footer [data-bc-question] [data-bc-question-title] {
@@ -4716,7 +4725,6 @@ footer [data-bc-schema-column] {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 1em;
 }
 
 footer [data-bc-schema-column] .child-1{
@@ -4739,6 +4747,7 @@ footer [data-bc-schema-column] .child-4{
 
 footer [data-bc-answer-container] {
   width: 100%;
+  height: 50px;
 }
 
 footer .child-3,footer .child-2,footer .child-1
@@ -4786,6 +4795,11 @@ footer [data-bc-answer-container] select {
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
   outline: none !important;
+}
+
+footer [data-bc-answer-container] textarea,
+footer [data-bc-part-container]{
+  height: 60px;
 }
 
 footer [data-bc-answer-container] input[type="text"]::-moz-placeholder, footer [data-bc-answer-container] input[type="password"]::-moz-placeholder, footer [data-bc-answer-container] input[type="time"]::-moz-placeholder, footer [data-bc-answer-container] input[type="color"]::-moz-placeholder, footer [data-bc-answer-container] input[type="file"]::-moz-placeholder, footer [data-bc-answer-container] textarea::-moz-placeholder{
@@ -4891,11 +4905,11 @@ label.Upload{
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  transform: translateY(-30px);
-  -webkit-transform: translateY(-30px);
-  -moz-transform: translateY(-30px);
-  -ms-transform: translateY(-30px);
-  -o-transform: translateY(-30px);
+  transform: translateY(12px);
+  -webkit-transform: translateY(12px);
+  -moz-transform: translateY(12px);
+  -ms-transform: translateY(12px);
+  -o-transform: translateY(12px);
 }
 
 label.Upload:hover{
@@ -4947,6 +4961,7 @@ label.Upload:hover{
 
 footer .col{
   width: 100%;
+  margin-top: 1em;
 }
 
 footer .col .captchaBox{
